@@ -15,7 +15,7 @@ function App() {
       <p id="thevalue" >0</p><br />
       <hr/>
       <h1>Video Playback Testing</h1>
-      <h5>Here will be video playback testing area , ideally with two video sections. One section will have a default video shipped with the site , the other will allow a youtube link and be ripped from youtube</h5>
+      <p>Here will be video playback testing area , ideally with two video sections. One section will have a default video shipped with the site , the other will allow a youtube link and be ripped from youtube</p>
 
       
     </div>

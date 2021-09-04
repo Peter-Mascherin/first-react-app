@@ -1,26 +1,21 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h3>Hello Buddy this works</h3>
-      <h4>Another one added just to make sure it works as publishing to github</h4>
-      <h5>Final one added to make sure its right</h5>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h3 id="myid">Hello Buddy this works</h3>
+      <h4 id="myid">This site is a test site to play around with and learn React</h4>
+      <h5 id="myid">It will consist of all sorts of different things to make in React, complete with garbage and huge html syntax</h5>
+      <hr></hr>
+      <h1>Increment Testing</h1>
+      <p>Click button to increment or decrement</p>
+      <button onClick={() => incrementDecrement(1)}>+</button>
+      <button onClick={() => incrementDecrement(-1)}>-</button>
+      <p id="thevalue" >0</p><br />
+      <hr/>
+      <h1>Video Playback Testing</h1>
+      <h5>Here will be video playback testing area , ideally with two video sections. One section will have a default video shipped with the site , the other will allow a youtube link and be ripped from youtube</h5>
 
       
     </div>
@@ -28,5 +23,26 @@ function App() {
     
   );
 }
+
+function incrementDecrement(choice)
+{
+  var parvalue = document.getElementById("thevalue").innerHTML;
+  
+  switch(choice)
+  {
+    case 1: document.getElementById("thevalue").innerHTML = parseInt(parvalue) + choice; break;
+    case -1: 
+    if(parseInt(document.getElementById("thevalue").innerHTML) === 0)
+      {
+        alert("Cant go below 0");
+        break;
+      }
+      document.getElementById("thevalue").innerHTML = parseInt(parvalue) + choice; 
+      break;
+    default: alert("something broke");
+  }
+}
+
+
 
 export default App;
